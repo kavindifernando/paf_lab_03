@@ -11,16 +11,21 @@ public class Item {
 
 	 try
 	 {
-	 Class.forName("com.mysql.jdbc.Driver");
-	 con= DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/item",
-	 "root", "");
-	 //For testing
-	 System.out.print("Successfully connected");
+		 Class.forName("com.mysql.jdbc.Driver");
+		 con=DriverManager.getConnection("jdbc:mysql://localhost:3306/item","root","");
+	 }catch(Exception e){
+		 e.printStackTrace();
 	 }
-	 catch(Exception e)
-	 {
-	 e.printStackTrace();
-	 }
+//	 Class.forName("com.mysql.jdbc.Driver");
+//	 con= DriverManager.getConnection("jdbc:mysql://localhost:3306/hms",
+//	 "root", "");
+//	 //For testing
+//	 System.out.print("Successfully connected");
+//	 }
+//	 catch(Exception e)
+//	 {
+//	 e.printStackTrace();
+//	 }
 
 	 return con;
 	}
